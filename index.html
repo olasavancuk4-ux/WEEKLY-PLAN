@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEEKLY PLAN</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    
+<body>
+    <div class="container">
+        <h1>РОЗКЛАД ЗАНЯТЬ</h1>
+        <div class="sidebar">
+            <button class="day-btn" data-day="Понеділок">Понеділок</button>
+            <button class="day-btn" data-day="Вівторок">Вівторок</button>
+            <button class="day-btn" data-day="Середа">Середа</button>
+            <button class="day-btn" data-day="Четвер">Четвер</button>
+            <button class="day-btn" data-day="П'ятниця">П'ятниця</button>
+        </div>
+        <div class="main">
+            <h2 id="day-title">Понеділок</h2>
+            <div class="add-lesson">
+                <input type="text" id="lesson-name" placeholder="Назва уроку">
+                <input type="text" id="lesson-room" placeholder="Номер кабінету">
+                <button id="add-lesson-btn">Додати урок</button>
+            </div>
+            <div id="lessons-list"></div>
+            <h3>Дз</h3>
+            <div class="add-homework">
+                <select name="" id="homework-subject"></select>
+                <input type="text" id="homework-text" placeholder="Введіть дз">
+                <button id="add-homework-btn">Додати дз</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
