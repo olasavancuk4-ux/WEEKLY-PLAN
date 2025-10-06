@@ -24,3 +24,24 @@ h1 {
     max-width: 1100px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+.sidebar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.day-btn{
+    background:#c9c1a7;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    transition: 0.2s background;
+}
+.day-btn:hover{
+    background: #d8a89a;
+}
