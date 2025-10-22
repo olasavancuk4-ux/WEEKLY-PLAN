@@ -25,15 +25,15 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar{
-    display:flex;
+.sidebar {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap:10px;
+    gap: 10px;
 }
 
-.day-btn{
-    background:#c9c1a7;
+.day-btn {
+    background: #c9c1a7;
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -42,6 +42,130 @@ h1 {
     border: none;
     transition: 0.2s background;
 }
-.day-btn:hover{
+
+.day-btn:hover {
     background: #d8a89a;
+}
+
+.day-btn.active {
+    background-color: #9cafaa;
+    color: #ffffff;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.add-lesson,
+.add-homework {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#add-lesson-btn,
+#add-homework-btn,
+.save-lesson,
+.edit-lesson,
+.delete-lesson,
+.save-hw,
+.edit-hw-btn,
+.delete-hw-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #9cafaa;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-lesson-btn:hover,
+#add-homework-btn:hover,
+.save-lesson:hover,
+.edit-lesson:hover,
+.delete-lesson:hover,
+.save-hw:hover,
+.edit-hw-btn:hover,
+.delete-hw-btn:hover {
+    background: #d6dad8;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-lesson input,
+.add-homework input,
+.add-homework select,
+.homework-el input,
+.edit-name,
+.edit-room {
+    border-radius: 6px;
+    padding: 6px;
+    flex-grow: 1;
+    border: 1px solid #cccccc;
+
+}
+
+.lesson {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lesson h3 {
+    width: fit-content;
+    display: inline;
+}
+
+.lesson-actions {
+    display: inline;
+    float: right;
+}
+
+.homework-el {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding-left: 5px;
+    gap: 6px;
+
+}
+
+input[type="checkbox"] {
+    margin-right: 7px;
+}
+
+input[type="checkbox"]:checked+span {
+    text-decoration: line-through;
+    color: #777;
+
+}
+
+@media (max-width:768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .sidebar {
+        flex-wrap: wrap;
+
+    }
+
+    .lesson-actions {
+        float: none;
+
+    }
+
+    .lesson-actions button,
+    .homework-el div button {
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+
+    .homework-el{
+        flex-wrap: wrap;
+    }
 }

@@ -235,10 +235,14 @@ function renderLessons() {
                 // -- Звичайний вигляд домашки --
                 else {
                     work_div.innerHTML = `
+                        <div>
                         <input type="checkbox" ${work.done ? "checked" : ""}>
                         <span>${work.text}</span>
-                        <button class="edit-hw-btn">редагувати</button>
-                        <button class="delete-hw-btn">видалити</button>
+                        </div>
+                        <div>
+                        <button class="edit-hw-btn">✏️</button>
+                        <button class="delete-hw-btn">❌</button>
+                        </div>
                     `
                     // Позначка "виконано"
                     work_div.querySelector("input").addEventListener('change', function (event) {
